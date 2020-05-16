@@ -9,3 +9,14 @@ There are third-party companies out there who provide AirBnB pricing for a fee, 
 With this project, I hope to create a model that takes in AirBnB listing data and predicts the base price for listings in Los Angeles, CA. I hope to expand this project to other cities and also to use NLP techniques on the text attributes to see if it improves accuracy.
 
 ## Conclusions
+This model could contribute to the AirBnB host platform by providing more insight into the market and how much a host can expect to make by listing their space. This analysis also provides insight into which features of a listing are most important, and what a host can do to earn more for their listing.
+Through modeling the data using a RandomForestRegressor, we know that we can predict what the nightly price of an AirBnB listing in LA should be with 80.87% R^2 accuracy, according to other listings and their features. We see from the feature weights that over 70% of the model is based on the ‘accommodates’, ‘bathrooms’, ‘room_type’ and ‘latitude’/‘longitude’ attributes, which are all fixed numbers a host can easily come up with when going to look up whether or not to AirBnB their space. Because the ‘accommodates’ feature is so important in determining price, and we saw earlier that the list price increased as the number of guests accommodated increased, we could also recommend that hosts optimize their space to accommodate as many guests (comfortably) as possible to optimize revenue. 
+
+I was also interested to see how many predictions fell within 5% of the actual price, within 10%, and above 15%. 
+Total # test data: 7770
+Within 5% error: 4595
+Within 10% error: 6663
+More than 15% error: 414
+
+This shows us that only about 5% of the predictions came in with more than 15% error.
+
